@@ -85,21 +85,21 @@ namespace Cli
 
     void HelpFeature()
     {
-        printf("memento 0.1a [alpha] ( http://github.com/memento )\n");
+        printf("memento 0.1a [alpha] ( http://github.com/croncat/memento )\n");
         printf("Usage: memento [OPTION] {ARGUMENT/S}\n");
         printf("OPTIONS:\n");
         printf("  -l: list all categories\n");
         printf("  -a: add category\n");
         printf("  -d: delete category\n");
-        printf("  -n: add new message to category\n");
-        printf("  -s: show all messages in category\n");
+        printf("  -n: add new note/message to category\n");
+        printf("  -s: show all notes/messages in category\n");
         printf("EXAMPLES:\n");
         printf("  memento -l\n");
-        printf("  memento -a quotes\n");
+        printf("  memento -a netlog\n");
         printf("  memento -d commands\n");
         printf("  memento -n quotes \"my first quote, yeah!\"\n");
         printf("  memento -s films\n");
-        printf("memento: minimalist organizer\n");
+        printf("memento: fast and minimalist note-taking application\n");
 
         exit(0);
     }

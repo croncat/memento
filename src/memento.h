@@ -42,7 +42,7 @@ namespace Memento
     {
         int i;
         for(i=0; i<argc; i++) {
-            printf("- %s\n", argv[i] ? argv[i] : "NULL");
+            printf("* %s\n", argv[i] ? argv[i] : "NULL");
         }
         //printf("\n");
         return 0;
@@ -91,7 +91,7 @@ namespace Memento
     {
         char query[256];
 
-        sprintf(query, "CREATE TABLE %s(ID INTEGER PRIMARY KEY AUTOINCREMENT, MESSAGE TEXT NOT NULL)\0", category);
+        sprintf(query, "CREATE TABLE %s(ID INTEGER PRIMARY KEY AUTOINCREMENT, MESSAGE TEXT NOT NULL)", category);
 
         OpenMementoDatabase();
         ExecMementoDatabase(query);
@@ -102,7 +102,7 @@ namespace Memento
     {
         char query[256];
 
-        sprintf(query, "DROP TABLE %s\0", category);
+        sprintf(query, "DROP TABLE %s", category);
 
         OpenMementoDatabase();
         ExecMementoDatabase(query);
@@ -113,7 +113,7 @@ namespace Memento
     {
         char query[2048];
 
-        sprintf(query, "INSERT INTO %s (MESSAGE) VALUES ('%s')\0", category, message);
+        sprintf(query, "INSERT INTO %s (MESSAGE) VALUES ('%s')", category, message);
 
         OpenMementoDatabase();
         ExecMementoDatabase(query);
@@ -124,7 +124,7 @@ namespace Memento
     {
         char query[256];
 
-        sprintf(query, "SELECT MESSAGE FROM %s\0", category);
+        sprintf(query, "SELECT MESSAGE FROM %s", category);
 
         OpenMementoDatabase();
         ExecMementoDatabase(query);

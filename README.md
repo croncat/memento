@@ -22,3 +22,21 @@ $ make
 ## Usage
 
 For help, type 'memento' in your terminal.
+
+```
+memento 0.1a [alpha] ( http://github.com/croncat/memento )
+Usage: memento [OPTION] {ARGUMENT/S}
+OPTIONS:
+  -l: list all categories
+  -a: add category
+  -d: delete category
+  -n: add new note/message to category
+  -s: show all notes/messages in category
+EXAMPLES:
+  memento -l
+  memento -a netlog
+  memento -d commands
+  memento -n quotes "my first quote, yeah!"
+  memento -s films
+memento: fast and minimalist note-taking application
+```
