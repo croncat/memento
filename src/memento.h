@@ -42,9 +42,9 @@ namespace Memento
     {
         int i;
         for(i=0; i<argc; i++) {
-            printf("* %s\n", argv[i] ? argv[i] : "NULL");
+            printf("· %s ", argv[i] ? argv[i] : "NULL");
         }
-        //printf("\n");
+        printf("\n");
         return 0;
     }
 
@@ -124,7 +124,18 @@ namespace Memento
     {
         char query[256];
 
-        sprintf(query, "SELECT MESSAGE FROM %s", category);
+        sprintf(query, "SELECT ID, MESSAGE FROM %s", category);
+
+        OpenMementoDatabase();
+        ExecMementoDatabase(query);
+        sqlite3_close(db);
+    }
+
+    void RemoveMessage(const char *category, const char *message)
+    {
+        char query[256];
+
+        sprintf(query, "DELETE FROM %s WHERE ID = %s", category, message);
 
         OpenMementoDatabase();
         ExecMementoDatabase(query);

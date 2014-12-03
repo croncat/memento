@@ -44,5 +44,7 @@ int main(int argc, char *argv[])
 
     Cli::ShowMessages(argc, argv);
 
+    Cli::RemoveMessage(argc, argv);
+
     Cli::HelpFeature();
 }

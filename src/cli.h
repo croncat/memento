@@ -83,6 +83,15 @@ namespace Cli
         }
     }
 
+    void RemoveMessage(int argc, char *argv[])
+    {
+        if (argc == 4 && strncmp(argv[1],"-r", 2) == 0 && strlen(argv[1]) == 2) {
+
+            Memento::RemoveMessage(argv[2], argv[3]);
+            exit(0);
+        }
+    }
+
     void HelpFeature()
     {
         printf("memento 0.1a [alpha] ( http://github.com/croncat/memento )\n");
@@ -93,12 +102,14 @@ namespace Cli
         printf("  -d: delete category\n");
         printf("  -n: add new note/message to category\n");
         printf("  -s: show all notes/messages in category\n");
+        printf("  -r: remove note/message from category\n");
         printf("EXAMPLES:\n");
         printf("  memento -l\n");
         printf("  memento -a netlog\n");
         printf("  memento -d commands\n");
         printf("  memento -n quotes \"my first quote, yeah!\"\n");
         printf("  memento -s films\n");
+        printf("  memento -r quotes 151\n");
         printf("memento: fast and minimalist note-taking application\n");
 
         exit(0);

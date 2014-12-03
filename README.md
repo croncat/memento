@@ -32,11 +32,13 @@ OPTIONS:
   -d: delete category
   -n: add new note/message to category
   -s: show all notes/messages in category
+  -r: remove note/message from category
 EXAMPLES:
   memento -l
   memento -a netlog
   memento -d commands
   memento -n quotes "my first quote, yeah!"
   memento -s films
+  memento -r quotes 151
 memento: fast and minimalist note-taking application
 ```
