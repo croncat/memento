@@ -1,0 +1,3 @@
+* Validation against SQL injection
+* Insert '' in note/message
+* Search feature
