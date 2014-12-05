@@ -91,7 +91,7 @@ namespace Memento
     {
         char query[256];
 
-        sprintf(query, "CREATE TABLE %s(ID INTEGER PRIMARY KEY AUTOINCREMENT, MESSAGE TEXT NOT NULL)", category);
+        sprintf(query, "CREATE TABLE %s(ID INTEGER PRIMARY KEY AUTOINCREMENT, MESSAGE_DATETIME DATETIME, MESSAGE TEXT NOT NULL)", category);
 
         OpenMementoDatabase();
         ExecMementoDatabase(query);
@@ -113,7 +113,7 @@ namespace Memento
     {
         char query[2048];
 
-        sprintf(query, "INSERT INTO %s (MESSAGE) VALUES ('%s')", category, message);
+        sprintf(query, "INSERT INTO %s (MESSAGE_DATETIME, MESSAGE) VALUES (datetime('now','localtime'), '%s')", category, message);
 
         OpenMementoDatabase();
         ExecMementoDatabase(query);
@@ -124,7 +124,7 @@ namespace Memento
     {
         char query[256];
 
-        sprintf(query, "SELECT ID, MESSAGE FROM %s", category);
+        sprintf(query, "SELECT ID, MESSAGE_DATETIME, MESSAGE FROM %s", category);
 
         OpenMementoDatabase();
         ExecMementoDatabase(query);
