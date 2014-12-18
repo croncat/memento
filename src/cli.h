@@ -94,23 +94,23 @@ namespace Cli
 
     void HelpFeature()
     {
-        printf("memento 0.1a [alpha] ( http://github.com/croncat/memento )\n");
-        printf("Usage: memento [OPTION] {ARGUMENT/S}\n");
-        printf("OPTIONS:\n");
-        printf("  -l: list all categories\n");
-        printf("  -a: add category\n");
-        printf("  -d: delete category\n");
-        printf("  -n: add new note/message to category\n");
-        printf("  -s: show all notes/messages in category\n");
-        printf("  -r: remove note/message from category\n");
-        printf("EXAMPLES:\n");
-        printf("  memento -l\n");
-        printf("  memento -a netlog\n");
-        printf("  memento -d commands\n");
-        printf("  memento -n quotes \"my first quote, yeah!\"\n");
-        printf("  memento -s films\n");
-        printf("  memento -r quotes 151\n");
-        printf("memento: fast and minimalist note-taking application\n");
+        printf( "memento 0.1a [alpha] ( http://github.com/croncat/memento )\n"
+            "Usage: memento [OPTION] {ARGUMENT/S}\n"
+            "OPTIONS:\n"
+            "  -l: list all categories\n"
+            "  -a: add category\n"
+            "  -d: delete category\n"
+            "  -n: add new note/message to category\n"
+            "  -s: show all notes/messages in category\n"
+            "  -r: remove note/message from category\n"
+            "EXAMPLES:\n"
+            "  memento -l\n"
+            "  memento -a netlog\n"
+            "  memento -d commands\n"
+            "  memento -n quotes \"my first quote, yeah!\"\n"
+            "  memento -s films\n"
+            "  memento -r quotes 151\n"
+            "memento: fast and minimalist note-taking application\n");
 
         exit(0);
     }
